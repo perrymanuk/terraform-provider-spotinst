@@ -266,6 +266,7 @@ type NetworkInterface struct {
 	AccessConfigs []*AccessConfig `json:"accessConfigs,omitempty"`
 	AliasIPRanges []*AliasIPRange `json:"aliasIpRanges,omitempty"`
 	Network       *string         `json:"network,omitempty"`
+	ProjectId	  *string		  `json:"projectId,omitempty"`
 
 	forceSendFields []string
 	nullFields      []string
@@ -1553,7 +1554,7 @@ func (o *NetworkInterface) SetNetwork(v *string) *NetworkInterface {
 }
 
 // SetProjectId sets the subnetwork of the network by its id
-func (o *NetworkInterface) SetProjectId(v *string) *ProjectId {
+func (o *NetworkInterface) SetProjectId(v *string) *NetworkInterface {
 	if o.ProjectId = v; o.ProjectId == nil {
 		o.nullFields = append(o.nullFields, "ProjectId")
 	}
@@ -1561,7 +1562,6 @@ func (o *NetworkInterface) SetProjectId(v *string) *ProjectId {
 }
 
 // region AccessConfig setters
-
 func (o AccessConfig) MarshalJSON() ([]byte, error) {
 	type noMethod AccessConfig
 	raw := noMethod(o)

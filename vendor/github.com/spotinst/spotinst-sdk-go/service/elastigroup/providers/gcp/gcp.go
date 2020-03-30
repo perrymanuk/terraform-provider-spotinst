@@ -1552,6 +1552,14 @@ func (o *NetworkInterface) SetNetwork(v *string) *NetworkInterface {
 	return o
 }
 
+// SetProjectId sets the subnetwork of the network by its id
+func (o *NetworkInterface) SetProjectId(v *string) *ProjectId {
+	if o.ProjectId = v; o.ProjectId == nil {
+		o.nullFields = append(o.nullFields, "ProjectId")
+	}
+	return o
+}
+
 // region AccessConfig setters
 
 func (o AccessConfig) MarshalJSON() ([]byte, error) {

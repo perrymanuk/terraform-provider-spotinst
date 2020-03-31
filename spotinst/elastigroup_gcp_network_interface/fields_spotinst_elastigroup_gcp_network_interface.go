@@ -24,7 +24,7 @@ func Setup(fieldsMap map[commons.FieldName]*commons.GenericField) {
 						Type:     schema.TypeString,
 						Required: true,
 					},
-					string(ProjectId): {
+					string(ProjectID): {
 						Type:     schema.TypeString,
 						Required: false,
 					},

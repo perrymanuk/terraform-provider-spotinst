@@ -266,7 +266,7 @@ type NetworkInterface struct {
 	AccessConfigs []*AccessConfig `json:"accessConfigs,omitempty"`
 	AliasIPRanges []*AliasIPRange `json:"aliasIpRanges,omitempty"`
 	Network       *string         `json:"network,omitempty"`
-	ProjectId	  *string		  `json:"projectId,omitempty"`
+	ProjectId     *string         `json:"projectId,omitempty"`
 
 	forceSendFields []string
 	nullFields      []string
@@ -1553,10 +1553,9 @@ func (o *NetworkInterface) SetNetwork(v *string) *NetworkInterface {
 	return o
 }
 
-// SetProjectId sets the subnetwork of the network by its id
-func (o *NetworkInterface) SetProjectId(v *string) *NetworkInterface {
+func (o *NetworkInterface) SetProjectID(v *string) *NetworkInterface {
 	if o.ProjectId = v; o.ProjectId == nil {
-		o.nullFields = append(o.nullFields, "ProjectId")
+		o.nullFields = append(o.nullFields, "subnetwork_project")
 	}
 	return o
 }

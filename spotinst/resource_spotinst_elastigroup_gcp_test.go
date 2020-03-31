@@ -1027,7 +1027,7 @@ const testNetworkInterfacesGCPGroupConfig_Update = `
  // --- NETWORK INTERFACE ------------------
 	network_interface {
 		network = "updated"
-	
+
 		access_configs {
 			name = "config2"
 			type = "ONE_TO_ONE_NAT"

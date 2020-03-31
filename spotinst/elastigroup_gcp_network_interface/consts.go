@@ -5,7 +5,7 @@ import "github.com/terraform-providers/terraform-provider-spotinst/spotinst/comm
 const (
 	NetworkInterface commons.FieldName = "network_interface"
 	Network          commons.FieldName = "network"
-	ProjectID        commons.FieldName = "project_id" //ESTE
+	ProjectID        commons.FieldName = "subnetwork_project"
 	AccessConfigs    commons.FieldName = "access_configs"
 	AliasIPRanges    commons.FieldName = "alias_ip_ranges"
 

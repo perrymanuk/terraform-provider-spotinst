@@ -24,6 +24,11 @@ func Setup(fieldsMap map[commons.FieldName]*commons.GenericField) {
 						Type:     schema.TypeString,
 						Required: true,
 					},
+					string(ProjectID): {
+						Type:     schema.TypeString,
+						Required: false,
+						Optional: true,
+					},
 
 					string(AccessConfigs): {
 						Type:     schema.TypeSet,
@@ -111,6 +116,10 @@ func expandNetworkInterface(data interface{}) ([]*gcp.NetworkInterface, error) {
 
 			if v, ok := m[string(Network)].(string); ok && v != "" {
 				iface.SetNetwork(spotinst.String(v))
+			}
+
+			if v, ok := m[string(ProjectID)].(string); ok && v != "" {
+				iface.SetProjectID(spotinst.String(v))
 			}
 
 			if v, ok := m[string(AccessConfigs)]; ok {
